@@ -9,7 +9,7 @@
         int a2 = userNumber % 10;
         //  int result = (userNumber - a1 * 100 - a2) / 10;                      первая версия вычислений...слишком душная и сложная, вторая проще.
         int result = userNumber / 10 % 10;
-        Console.WriteLine($"{userNumber} -> {result}");
+        Console.WriteLine($"Число: {userNumber}. Вторая цифра: {result}.");
         break;
     }
     else Console.WriteLine("Вы ввели неверное число.");
