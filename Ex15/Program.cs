@@ -1,12 +1,28 @@
-﻿Console.Write("Введите номер дня недели: ");
-string userInput = Console.ReadLine() ?? "";
-int userNumber = int.Parse(userInput);
-if (userNumber > 0 && userNumber < 6)
+﻿int userNumber(string message)
 {
-    Console.Write("Рабочие дни");
+    while (true)
+    {
+        Console.Write(message);
+        int userInput;
+        if (int.TryParse(Console.ReadLine(), out userInput))
+        {
+            return userInput;
+        }
+        else Console.WriteLine("Вы ввели некорректные данные. ");
+    }
 }
-else if (userNumber > 5 && userNumber < 8)
+while (true)
 {
-    Console.Write("Выходной день");
+    int weekDay = userNumber("Введите номер дня недели ");
+    if (weekDay > 0 && weekDay < 6)
+    {
+        Console.Write("Рабочий день");
+        break;
+    }
+    else if (weekDay > 5 && weekDay < 8)
+    {
+        Console.Write("Выходной день");
+        break;
+    }
+    else Console.WriteLine("Нет такого дня недели");
 }
-else Console.Write("Нет такого дня недели");
