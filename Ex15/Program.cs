@@ -8,12 +8,12 @@
         {
             return userInput;
         }
-        else Console.WriteLine("Вы ввели некорректные данные. ");
+        else Console.WriteLine("Вы ввели некорректные данные ");
     }
 }
 while (true)
 {
-    int weekDay = userNumber("Введите номер дня недели ");
+    int weekDay = userNumber("Введите номер дня недели: ");
     if (weekDay > 0 && weekDay < 6)
     {
         Console.Write("Рабочий день");
