@@ -1,18 +1,18 @@
-﻿while (true)
+﻿int userNumber(string message)
 {
-    int userNumber(string message)
+    while (true)
     {
-        while (true)
+        Console.Write(message);
+        int userInput;
+        if (int.TryParse(Console.ReadLine(), out userInput))
         {
-            Console.Write(message);
-            int userInput;
-            if (int.TryParse(Console.ReadLine(), out userInput))
-            {
-                return userInput;
-            }
-            else Console.WriteLine("Вы ввели некорректные данные ");
+            return userInput;
         }
+        else Console.WriteLine("Вы ввели некорректные данные ");
     }
+}
+while (true)
+{
     int number = userNumber("Введите трехзначное число: ");
     if (number >= 100 && number < 1000)
     {
