@@ -1,32 +1,12 @@
 ﻿Console.Write("Введите номер дня недели: ");
 string userInput = Console.ReadLine() ?? "";
 int userNumber = int.Parse(userInput);
-if (userNumber == 1)
+if (userNumber > 0 && userNumber < 6)
 {
-    Console.Write("Понедельник");
+    Console.Write("Рабочие дни");
 }
-else if (userNumber == 2)
+else if (userNumber > 5 && userNumber < 8)
 {
-    Console.Write("Вторник");
-}
-else if (userNumber == 3)
-{
-    Console.Write("Среда");
-}
-else if (userNumber == 4)
-{
-    Console.Write("Четверг");
-}
-else if (userNumber == 5)
-{
-    Console.Write("Пятница");
-}
-else if (userNumber == 6)
-{
-    Console.Write("Суббота");
-}
-else if (userNumber == 7)
-{
-    Console.Write("Воскресенье");
+    Console.Write("Выходной день");
 }
 else Console.Write("Нет такого дня недели");
